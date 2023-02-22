@@ -11,17 +11,9 @@ module.exports = {
   root: true,
   ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
   extends: [
-    '@bibliotheca-dao/eslint-config-bases/typescript',
-    '@bibliotheca-dao/eslint-config-bases/sonar',
-    '@bibliotheca-dao/eslint-config-bases/regexp',
-    '@bibliotheca-dao/eslint-config-bases/jest',
-    '@bibliotheca-dao/eslint-config-bases/react',
-    '@bibliotheca-dao/eslint-config-bases/rtl',
-    '@bibliotheca-dao/eslint-config-bases/graphql-schema',
     // Add specific rules for nextjs
     'plugin:@next/next/core-web-vitals',
     // Apply prettier and disable incompatible rules
-    '@bibliotheca-dao/eslint-config-bases/prettier',
   ],
   rules: {
     // https://github.com/vercel/next.js/discussions/16832
