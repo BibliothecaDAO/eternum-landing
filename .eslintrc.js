@@ -3,10 +3,6 @@
  * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
  */
 
-const {
-  getDefaultIgnorePatterns,
-} = require('@bibliotheca-dao/eslint-config-bases/helpers');
-
 module.exports = {
   root: true,
   ignorePatterns: [`**/${'node'}_modules}`, '**/.cache', 'build', 'dist', '.next', '.out'],
