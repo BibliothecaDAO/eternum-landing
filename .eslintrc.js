@@ -3,13 +3,9 @@
  * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
  */
 
-const {
-  getDefaultIgnorePatterns,
-} = require('@bibliotheca-dao/eslint-config-bases/helpers');
-
 module.exports = {
   root: true,
-  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
+  ignorePatterns: ['.next', '.out'],
   extends: [
     // Add specific rules for nextjs
     'plugin:@next/next/core-web-vitals',
