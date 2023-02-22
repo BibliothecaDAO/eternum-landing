@@ -1,29 +1,11 @@
-// import { button } from '@bibliotheca-dao/ui-lib';
-import Menu from '/public/menu.svg';
-import Discord from '/public/social/discord.svg';
-import Github from '/public/social/github.svg';
-import Twitter from '/public/social/twitter.svg';
-import { useState, useEffect } from 'react';
-import { ScrollSpy } from '../util/ScrollSpy';
-import Button from './Button';
+import Menu from "/public/menu.svg";
+import Discord from "/public/social/discord.svg";
+import Github from "/public/social/github.svg";
+import Twitter from "/public/social/twitter.svg";
+import { useState, useEffect } from "react";
+import Button from "./Button";
 
-const NavMenu = ({ options }: any) => {
-  // control the click event
-  const onClick = (e: any) => {
-    /*  e.preventDefault();
-    // Set the hash
-    window.location.hash = e.target.hash;
-
-    // Scroll to the section + 1 to account for weird bug.
-    // remove the `+1` and click on Section 2 link to see the bug.
-    const targetSection: HTMLElement | null = document.querySelector(
-      `${e.target.hash}`
-    );
-    if (targetSection) {
-      window.scrollTo(0, targetSection.offsetTop + 1);
-    } */
-  };
-
+const NavMenu = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <header className="fixed top-0 z-10 w-full tracking-widest text-whitetext-xl bg-black/50 bg-blend-multiply backdrop-brightness-125 sm:block">
@@ -35,35 +17,31 @@ const NavMenu = ({ options }: any) => {
           className={`justify-center gap-4 lg:gap-8 my-auto text-base text-center flex lg:flex-row grow
             ${
               showMobileMenu
-                ? 'absolute top-16 mx-auto flex-col left-0 right-0 bg-black/90 py-6'
-                : 'hidden lg:flex'
+                ? "absolute top-16 mx-auto flex-col left-0 right-0 bg-black/90 py-6"
+                : "hidden lg:flex"
             }
           `}
         >
           <a
             href="https://bibliothecadao.xyz/treasury"
-            onClick={onClick}
             className={`hover:text-gray-400`}
           >
             The Treasury
           </a>
           <a
             href="https://snapshot.org/#/council.bibliotheca.eth"
-            onClick={onClick}
             className={`hover:text-gray-400`}
           >
             Snapshot Voting
           </a>
           <a
             href="https://scroll.bibliothecadao.xyz/"
-            onClick={onClick}
             className={`hover:text-gray-400`}
           >
             Master Scroll
           </a>
           <a
             href="https://staking.bibliothecadao.xyz/"
-            onClick={onClick}
             className={`hover:text-gray-400`}
           >
             Staking
@@ -95,11 +73,7 @@ const NavMenu = ({ options }: any) => {
             <Twitter className="w-6 fill-current hover:animate-bounce sm:mr-4" />
           </a>
         </div>
-        <Button
-          
-          href="https://atlas.bibliothecadao.xyz"
-          target="_blank"
-        >
+        <Button href="https://atlas.bibliothecadao.xyz" target="_blank">
           Explore the Atlas
         </Button>
         <Menu
@@ -124,5 +98,5 @@ export const WithNavMenu = ({ children, selector }: any) => {
     setOptions(optionsFromSections);
   }, [selector]);
 
-  return <NavMenu options={options} />;
+  return <NavMenu />;
 };

@@ -9,28 +9,10 @@
     "url": "https://github.com/BibliothecaForAdventurers"
   },
   "scripts": {
-    "clean": "rimraf --no-glob ./.next ./out ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
     "dev": "next",
     "build": "next build",
-    "build-no-checks": "NEXTJS_IGNORE_TYPECHECK=1 NEXTJS_IGNORE_ESLINT=1 next build",
-    "vercel-build": "yarn share-static-hardlink && next build",
     "export": "next export",
-    "start": "next start",
-    "bundle-analyze": "cross-env ANALYZE=true yarn build",
-    "?share-static-symlink": "echo 'Use this command to link assets, locales... from shared static folder'",
-    "share-static-symlink": "rimraf ./public/shared-assets && symlink-dir ../../static/assets ./public/shared-assets",
-    "?share-static-hardlink": "echo 'Use this command to link assets, locales... from shared static folder'",
-    "share-static-hardlink": "rimraf ./public/shared-assets && syncdir ../../static/assets ./public/shared-assets --copy",
-    "check-build-size": "size-limit --highlight-less",
-    "check-dist": "es-check -v",
-    "test": "run-s test-unit test-e2e",
-    "test-unit": "jest --config jest.config.js",
-    "test-e2e": "playwright test",
-    "test-e2e-prod": "cross-env E2E_PLAYWRIGHT_MODE=BUILD_AND_START playwright test",
-    "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "lint-styles": "stylelint --config ./stylelint.config.js 'src/**/*.css'",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+    "start": "next start"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.9.2",
