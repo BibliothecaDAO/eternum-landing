@@ -233,7 +233,7 @@ function Home() {
                 .slice(5)
                 .map((slide) => {
                   {
-                    /* eslint-disable-next-line sonarjs/no-identical-functions */
+                    /* */
                   }
                   return (
                     <FullPageSlide
