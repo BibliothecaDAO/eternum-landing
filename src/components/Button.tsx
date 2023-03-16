@@ -8,14 +8,18 @@ type ButtonProps = {
 const Button: FC<ButtonProps> = ({ href, ...rest }) => {
   if (href) {
     return (
-      <a className="p-3 font-normal tracking-wide text-white normal-case border-0 rounded-lg shadow-lg backdrop-brightness-125 bg-black/50" href={href} {...rest}>
+      <a
+        className="px-4 py-2 text-sm font-normal tracking-wide text-white uppercase bg-black rounded-lg shadow-lg backdrop-brightness-125 hover:bg-black/50"
+        href={href}
+        {...rest}
+      >
         {rest.children}
       </a>
     );
   }
   return (
     <button
-      className="p-3 font-normal tracking-wide text-white normal-case border-0 rounded-lg shadow-lg backdrop-brightness-125 bg-black/90"
+      className="px-4 py-2 text-sm tracking-wide text-white uppercase bg-black rounded-lg shadow-lg backdrop-brightness-125 hover:bg-black/50"
       {...rest}
     >
       {rest.children}

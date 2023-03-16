@@ -8,8 +8,8 @@ import Button from "./Button";
 const NavMenu = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
-    <header className="fixed top-0 z-10 w-full tracking-widest text-whitetext-xl bg-black/50 bg-blend-multiply backdrop-brightness-125 sm:block">
-      <div className="flex justify-between w-full px-8">
+    <header className="fixed top-0 z-10 w-full p-4 text-xl tracking-widest text-white rounded bg-blend-multiply backdrop-brightness-125 sm:block">
+      <div className="flex justify-between w-full px-8 py-3 bg-black/40 rounded-xl">
         <span className="mt-1 text-5xl uppercase font-lords">
           R<span className="hidden lg:inline">ealms</span>
         </span>
@@ -54,7 +54,7 @@ const NavMenu = () => {
             rel="noreferrer"
             className="self-center"
           >
-            <Discord className="fill-current w-7 hover:animate-bounce sm:mr-4" />
+            <Discord className="fill-current w-7 sm:mr-4" />
           </a>
           <a
             href="https://github.com/BibliothecaForAdventurers"
@@ -62,7 +62,7 @@ const NavMenu = () => {
             rel="noreferrer"
             className="self-center"
           >
-            <Github className="fill-current w-7 hover:animate-bounce sm:mr-4" />
+            <Github className="fill-current w-7 sm:mr-4" />
           </a>
           <a
             href="https://twitter.com/LootRealms"
@@ -70,12 +70,15 @@ const NavMenu = () => {
             rel="noreferrer"
             className="self-center"
           >
-            <Twitter className="w-6 fill-current hover:animate-bounce sm:mr-4" />
+            <Twitter className="w-6 fill-current sm:mr-4" />
           </a>
         </div>
-        <Button href="https://atlas.bibliothecadao.xyz" target="_blank">
-          Explore the Atlas
-        </Button>
+        <div className="self-center">
+          <Button href="https://atlas.bibliothecadao.xyz" target="_blank">
+            Explore the Atlas
+          </Button>
+        </div>
+
         <Menu
           onClick={() => setShowMobileMenu(!showMobileMenu)}
           className="justify-center my-auto lg:hidden"
