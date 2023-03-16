@@ -32,7 +32,7 @@ function slides(fullpageApi: any) {
           </div>
           <div className="text-white " data-content>
             <p className="duration-700 delay-200 opacity-0 sm:text-5xl">
-              Build empires inside your browser
+              Build Empires
             </p>
             <p className="pb-6 duration-700 delay-500 opacity-20 sm:text-3xl ">
               An eternal on-chain game running on StarkNet
