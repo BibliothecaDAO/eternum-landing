@@ -5,7 +5,7 @@
 
 module.exports = {
   root: true,
-  "parser": "babel-eslint",
+  parser: '@typescript-eslint/parser',
   ignorePatterns: [`**/${'node'}_modules}`, '**/.cache', 'build', 'dist', '.next', '.out'],
   extends: [
     // Add specific rules for nextjs
